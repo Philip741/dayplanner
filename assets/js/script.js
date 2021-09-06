@@ -2,7 +2,15 @@
 var today = moment();
 var taskContainer = document.getElementById('tasks');
 var testEl = document.getElementsByName('task7')
+var checkClear = localStorage.getItem('cleared', 'true');
 //displayDate.textContent = today.format("MMM Do, YYYY");
+if (!checkClear) {
+    localStorage.clear()
+    localStorage.setItem('cleared', 'true');
+}
+else {
+    localStorage.setItem('cleared', 'true');
+}
 $("#dayOfWeek").text(today.format("dddd"));
 $("#todayDate").text(today.format("MMM Do, YYYY"));
 
@@ -42,7 +50,12 @@ for (let i=0; i<length; i++) {
     console.log(localVal);
     setTaskEl = document.getElementById(key);
     //console.log(setTaskEl);
+    if (!setTaskEl){
+        console.log('Null value from ' + key);
+    }
+    else {
     setTaskEl.value = localVal;
+    }
 }
 
 //localStorage.clear();
