@@ -2,29 +2,52 @@
 var today = moment();
 var taskContainer = document.getElementById('tasks');
 var testEl = document.getElementsByName('task7')
-console.log(testEl);
 //displayDate.textContent = today.format("MMM Do, YYYY");
 $("#todayDate").text(today.format("MMM Do, YYYY"));
+
+
+function compTime(hour) {
+
+}
+//set colors based on time to task inputs
+//get all named input elements
+// if moment hour matches set to white, if older set to gray, if future set light green
+var allInput = document.querySelectorAll('#task-time');
+
+allInput.forEach((i) => {
+    let getData = i.getAttribute('data-id');
+    let checkTime = moment(getData, 'hh');
+    if (today.isSame(checkTime, 'hour')){
+        $(i).next().css("background-color", "white");
+    }
+    else if (today.isBefore(checkTime, 'hour')) {
+        $(i).next().css("background-color", "lightgreen");
+    }
+    else if (today.isAfter(checkTime, 'hour')) {
+        $(i).next().css("background-color", "lightgray");
+    }
+})
+
 
 //reload localStorage values to text inputs
 const localKeys = Object.keys(localStorage);
 console.log(localKeys);
 const length = localKeys.length;
-
+// localStorage.clear();
 for (let i=0; i<length; i++) {
     const key = localKeys[i];
     console.log(key);
     let localVal = localStorage.getItem(key);
     console.log(localVal);
     setTaskEl = document.getElementById(key);
-    console.log(setTaskEl);
+    //console.log(setTaskEl);
     setTaskEl.value = localVal;
 }
 
 //localStorage.clear();
 //click to save task
 taskContainer.addEventListener('click', function (e){
-    //localStorage.clear();
+    
     getName = e.target.getAttribute("name");
     getId = e.target.id;
     targetEl = document.getElementById(getId);
@@ -40,6 +63,7 @@ taskContainer.addEventListener('click', function (e){
     //console.log(getTag);
     //console.log("clicked on element " + getId);
     if (getName == "saveButton") {
+        //save input element id and associated text to localStorage
         localStorage.setItem(getTaskEl, getText); 
         console.log(localStorage);
     }
