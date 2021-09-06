@@ -3,6 +3,7 @@ var today = moment();
 var taskContainer = document.getElementById('tasks');
 var testEl = document.getElementsByName('task7')
 //displayDate.textContent = today.format("MMM Do, YYYY");
+$("#dayOfWeek").text(today.format("dddd"));
 $("#todayDate").text(today.format("MMM Do, YYYY"));
 
 
