@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body class="bg-green-900">
+    <section class="body-font shadow-md">
+        <div class="container  mx-auto bg-gray-100 pb-20 sm:pb-10">
+          <div class="flex flex-col flex-wrap text-center w-full mb-20 sm:pt-8 sm:pb-8 bg-green-600">
+            <h1 class="sm:text-5xl text-2xl text-white font-medium title-font mb-4 py-2">Daily Planner</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">A simple calendar app for planning your day.</p>
+          </div>
+          
+
+          <div class="container flex flex-col gap-2  sm:px-5 sm:px-20 sm:gap-4 mx-auto" id="tasks">
+            <div class="mx-auto h-10" id="todayDate">
+              test
+            </div>
+              <!-- set to flex column if below the small screen size  -->
+              <div class="flex flex-col flex-wrap sm:flex-row ">
+                  <div class="flex justify-center  sm:flex-grow-0 text-white bg-green-500 font-medium pr-7 pl-5 shadow-md">7 am</div> 
+                  <input type="text" class="flex-grow-0 sm:flex-auto font-medium shadow-md rounded-md py-2 hover:bg-yellow-400 bg-gray-200 pl-5 width-9/12" name="input7" id="task7" placeholder="Enter item">
+                  <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 hover:bg-yellow-400 shadow-md" name="saveButton" id="saveButton7">Save</div>
+              </div>
+              <div class="flex flex-col flex-wrap sm:flex-row ">
+                  <div class="flex justify-center  sm:flex-grow-0 text-white bg-green-500 font-medium pr-7 pl-5 shadow-md">8 am</div> 
+                  <input type="text" class=" flex-grow-0 sm:flex-auto font-medium shadow-md rounded-md py-2 hover:bg-yellow-400 bg-green-100 pl-5" name="input8" id="task8" placeholder="Enter item">
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5 pl-5 hover:bg-yellow-400 shadow-md" name="saveButton" id="saveButton8">Save</div>
+              </div> 
+              <div class="flex flex-col sm:flex-row space-x-4 h-10">
+                <div class="flex-grow-0 bg-green-50 font-medium pr-7 pl-5 shadow-md">9 am</div>
+                <div class="flex-auto bg-green-50 font-medium shadow-md">
+                    <input type="text" class="rounded-md py-2 bg-green-50 pl-5 w-full" placeholder="Enter item">
+                </div>
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 shadow-md">Save</div>
+              </div> 
+              <div class="flex flex-col sm:flex-row space-x-4 h-10">
+                <div class="flex-grow-0 bg-green-50 font-medium pr-5 pl-5 shadow-md">10 am</div>
+                <div class="flex-auto bg-green-50 font-medium shadow-md">
+                    <input type="text" class="rounded-md py-2 bg-green-50 pl-5 w-full" placeholder="Enter item">
+                </div>
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 shadow-md">Save</div>
+              </div> 
+              <div class="flex flex-col sm:flex-row space-x-4 h-10">
+                <div class="flex-grow-0 bg-green-50 font-medium pr-6 pl-5 shadow-md">11 am</div>
+                <div class="flex-1 bg-green-50 font-medium shadow-md">
+                    <input type="text" class="rounded-md py-2 bg-green-50 pl-5 w-full" placeholder="Enter item">
+                </div>
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 shadow-md">Save</div>
+              </div> 
+              <div class="flex flex-col sm:flex-row space-x-4 h-10">
+                <div class="flex-grow-0 bg-green-50 font-medium pr-5 pl-5 shadow-md">12 pm</div>
+                <div class="flex-auto bg-green-50 font-medium shadow-md">
+                    <input type="text" class="rounded-md py-2 bg-green-50 pl-5 w-full" placeholder="Enter item">
+                </div>
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 shadow-md">Save</div>
+              </div> 
+              <div class="flex flex-col sm:flex-row space-x-4 h-10">
+                <div class="flex-grow-0 bg-green-50 font-medium pr-7 pl-5 shadow-md">1 pm</div>
+                <div class="flex-auto bg-green-50 font-medium shadow-md">
+                    <input type="text" class="rounded-md py-2 bg-green-50 pl-5 w-full" placeholder="Enter item">
+                </div>
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 shadow-md">Save</div>
+              </div> 
+              <div class="flex flex-col sm:flex-row space-x-4 h-10">
+                <div class="flex-grow-0 bg-green-50 font-medium pr-7 pl-5 shadow-md">2 pm</div>
+                <div class="flex-auto bg-green-50 font-medium shadow-md">
+                    <input type="text" class="rounded-md py-2 bg-green-50 pl-5 w-full" placeholder="Enter item">
+                </div>
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 shadow-md">Save</div>
+              </div> 
+              <div class="flex flex-col sm:flex-row space-x-4 h-10">
+                <div class="flex-grow-0 bg-green-50 font-medium pr-7 pl-5 shadow-md">3 pm</div>
+                <div class="flex-auto bg-green-50 font-medium shadow-md">
+                    <input type="text" class="rounded-md py-2 bg-green-50 pl-5 w-full" placeholder="Enter item">
+                </div>
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 shadow-md">Save</div>
+              </div> 
+              <div class="flex flex-col sm:flex-row space-x-4 h-10">
+                <div class="flex-grow-0 bg-green-50 font-medium pr-7 pl-5 shadow-md">4 pm</div>
+                <div class="flex-auto bg-green-50 font-medium shadow-md">
+                    <input type="text" class="rounded-md py-2 bg-green-50 pl-5 w-full" placeholder="Enter item">
+                </div>
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 shadow-md">Save</div>
+              </div> 
+              <div class="flex flex-col sm:flex-row space-x-4 h-10">
+                <div class="flex-grow-0 bg-green-100 font-medium pr-7 pl-5 shadow-md">5 pm</div>
+                <div class="flex-auto bg-green-50 font-medium shadow-md">
+                    <input type="text" class="rounded-md py-2 bg-green-50 pl-5 w-full" placeholder="Enter item">
+                </div>
+              <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 shadow-md">Save</div>
+              </div> 
+           </div>
+
+           
+              
+         <!-- <div class="flex flex-wrap">
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+              <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+              <a class="text-indigo-500 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">The Catalyzer</h2>
+              <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+              <a class="text-indigo-500 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Neptune</h2>
+              <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+              <a class="text-indigo-500 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Melanchole</h2>
+              <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+              <a class="text-indigo-500 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        </div> -->
+
+      </section>
+      
+    
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
