@@ -17,20 +17,21 @@
 </head>
 <body class="bg-green-900">
     <section class="body-font shadow-md">
-        <div class="container  mx-auto bg-gray-100 pb-20 sm:pb-10">
-          <div class="flex flex-col flex-wrap text-center w-full mb-20 sm:pt-8 sm:pb-8 bg-green-600">
+        <div class="container pb-10 mx-auto bg-gray-100 sm:pb-20">
+          <div class="flex flex-col flex-wrap text-center w-full mb-10 sm:pt-5 sm:pb-2 bg-green-600">
             <h1 class="sm:text-5xl text-2xl text-white font-medium title-font mb-4 py-2">Daily Planner</h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">A simple calendar app for planning your day.</p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white pb-5">A simple calendar app for planning your day.</p>
           </div>
           
-
-          <div class="container flex flex-col gap-2  sm:px-5 sm:px-20 sm:gap-4 mx-auto" id="tasks">
-            <div class="mx-auto h-10" id="todayDate">
-              test
+          
+          <div class="container flex flex-col gap-2 sm:px-20 sm:gap-4 mx-auto" id="tasks">
+            <div class="mx-auto text-3xl" id="dayOfWeek">
+            </div>
+            <div class="mx-auto " id="todayDate">
             </div>
               <!-- set to flex column if below the small screen size  -->
               <div class="flex flex-col flex-wrap sm:flex-row ">
-                  <div data-id="07" id="task-time" class="flex justify-center  sm:flex-grow-0 text-white bg-green-500 font-medium pr-7 pl-5 shadow-md">7 am</div> 
+                  <div data-id="07" id="task-time" class="flex justify-center sm:flex-grow-0 text-white bg-green-500 font-medium pr-7 pl-5 shadow-md">7 am</div> 
                   <input type="text" class="flex-grow-0 sm:flex-auto font-medium shadow-md rounded-md py-2 hover:bg-yellow-400 bg-gray-200 pl-5 width-9/12" name="input7" id="task7" placeholder="Enter item">
                   <div class="flex-grow-0 bg-green-50 font-medium pr-5  pl-5 hover:bg-yellow-400 shadow-md" name="saveButton" id="saveButton7">Save</div>
               </div>
