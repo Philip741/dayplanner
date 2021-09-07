@@ -9,6 +9,7 @@ Basic application to schedule tasks throughout the day
 
 ## Features
 * Enter tasks at various times
+* Displays current day of the week and date
 * Saves tasks to browser local Storage 
 * Colors of tasks change based on time of the day (gray for past, white present hour, green future)
 
