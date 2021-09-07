@@ -1,18 +1,22 @@
 # Day Planner application
 
-### Description
+## Description
 Basic application to schedule tasks throughout the day
 
-### Features
+## Frameworks used
+* Tailwindcss
+* JQuery
+
+## Features
 * Enter tasks at various times
 * Saves tasks to browser local Storage 
 * Colors of tasks change based on time of the day (gray for past, white present hour, green future)
 
-### Deployment
+## Deployment
 This can be cloned using git and then run retaining the directory structure with the web server of your choice.
 <hr>
 
-### Deployed Example
+## Deployed Example
 <https://philipbrowning.github.io/dayplanner/>
 <hr>
 
